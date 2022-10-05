@@ -293,17 +293,9 @@ cd /home/quarkus/code-with-quarkus/
 ```
 
 ### 10.2. Run Quarkus with Gradle
-You may convert the existing project into gradle using `gradle init` command as described later in this section.  
-However, before you start you will need 3 files, in order to make it work:
-* build.gradle
-* gradle.properties
-* settings.gradle
-
-The reson behind it is, that the gradle converter works with simple projects.  
-Unfortunately, Quarkus projects are not standard and they don't cooperate well.  
-I solved this problem, and I gave you the example that works. You may copy the files from the given git reposiotry.  
-Sample files are available at the url:  
-https://eu-central-1.console.aws.amazon.com/codesuite/codecommit/repositories/base.images.red-hat.red-hat-8-5.quay-io.ubi-quarkus-mandrel.22-1.java-17.mandrel-gradle-7-5-java-17/browse/refs/tags/1.1.7/--/scripts/install/getting-started?region=eu-central-1  
+You may also run example given in section 10.1 using Gradle.  
+Unfortunately, author of the project didn't provide such option and we need to convert the project ourselves.
+To convert the existing project into gradle use `gradle init` command and follow prompt messages.  
 
 ```bash
 alias la='ls -la'
