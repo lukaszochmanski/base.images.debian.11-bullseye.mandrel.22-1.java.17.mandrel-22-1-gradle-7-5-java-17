@@ -1,8 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Thu Oct  6 00:05:16 CEST 2022  
+last updated: Thu Oct  6 00:08:06 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 1.1.6  
+Latest tag: 1.1.7  
 &nbsp;
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -86,13 +86,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.6
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.7
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.1.6                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.1.7                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -179,7 +179,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.6
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.7
 
 # echo $0
 /bin/bash
@@ -353,7 +353,7 @@ PROJECT_DIR=/home/quarkus/code-with-quarkus
 cd $PROJECT_DIR
 gradle init -p $PROJECT_DIR
 ```
-now copy the files, as described previously:  
+now edit the files    
 `settings.gradle`:
 ```
 pluginManagement {
