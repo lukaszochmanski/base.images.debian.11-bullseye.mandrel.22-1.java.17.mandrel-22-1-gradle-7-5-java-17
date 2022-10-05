@@ -1,34 +1,33 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 23:57:26 CEST 2022  
+last updated: Thu Oct  6 00:00:21 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 1.1.4  
+Latest tag: 1.1.5  
 &nbsp;
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**
 
-- [Debian-based Mandrel image optimized for building Quarkus projects](#debian-based-mandrel-image-optimized-for-building-quarkus-projects)
-  - [About](#about)
-  - [Before you start](#before-you-start)
-    - [Gradle configuration](#gradle-configuration)
-  - [1. How to clone:](#1-how-to-clone)
-  - [2. GitHub repository URL](#2-github-repository-url)
-  - [3. How to build locally:](#3-how-to-build-locally)
-  - [4. DockerHub page:](#4-dockerhub-page)
-  - [5. Image coordinates:](#5-image-coordinates)
-  - [6. Docker images:](#6-docker-images)
-  - [7. Layers:](#7-layers)
-  - [8. based on image:](#8-based-on-image)
-        - [8.1. References](#81-references)
-        - [8.2. Mandrel](#82-mandrel)
-  - [9. image details:](#9-image-details)
-  - [10. Quick start](#10-quick-start)
-    - [10.1. Run Quarkus with Gradle](#101-run-quarkus-with-gradle)
-    - [10.2. Run Quarkus with Maven](#102-run-quarkus-with-maven)
-    - [10.3. How to convert Maven project into Gradle](#103-how-to-convert-maven-project-into-gradle)
-  - [11. Frequently Asked Questions (FAQ)](#11-frequently-asked-questions-faq)
+- [About](#about)
+- [Before you start](#before-you-start)
+- [Gradle configuration](#gradle-configuration)
+- [1. How to clone](#1-how-to-clone)
+- [2. GitHub repository URL](#2-github-repository-url)
+- [3. How to build locally](#3-how-to-build-locally)
+- [4. DockerHub page](#4-dockerhub-page)
+- [5. Image coordinates](#5-image-coordinates)
+- [6. Docker images](#6-docker-images)
+- [7. Layers](#7-layers)
+- [8. based on image](#8-based-on-image)
+    - [8.1. References](#81-references)
+    - [8.2. Mandrel](#82-mandrel)
+- [9. image details](#9-image-details)
+- [10. Quick start](#10-quick-start)
+- [10.1. Run Quarkus with Gradle](#101-run-quarkus-with-gradle)
+- [10.2. Run Quarkus with Maven](#102-run-quarkus-with-maven)
+- [10.3. How to convert Maven project into Gradle](#103-how-to-convert-maven-project-into-gradle)
+- [11. Frequently Asked Questions (FAQ)](#11-frequently-asked-questions-faq)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
   
@@ -87,13 +86,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.4
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.5
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.1.4                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.1.5                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -180,7 +179,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.4
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.5
 
 # echo $0
 /bin/bash
