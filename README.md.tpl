@@ -1,15 +1,12 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
 last updated: ###TIMESTAMP###
+author: Lukasz Ochmanski (github@ochmanski.de)
 &nbsp;
 
 &nbsp;
-
-Main branch:  
-![](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiRVhoVDhzdnBrNzdQWVBrU0t6L01rU1hjSmYybm90NjVRNGFVK3c0dTNNYis5UnVuSTlHVEZ5M0dPSktoK1JaVXhOdWJkc1paYjdVM1lXOW1iTG94SHFZPSIsIml2UGFyYW1ldGVyU3BlYyI6IjFZV2pOditTMzBlMFVnU1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
 Latest tag: ###CI_COMMIT_TAG###  
-![](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiRVhoVDhzdnBrNzdQWVBrU0t6L01rU1hjSmYybm90NjVRNGFVK3c0dTNNYis5UnVuSTlHVEZ5M0dPSktoK1JaVXhOdWJkc1paYjdVM1lXOW1iTG94SHFZPSIsIml2UGFyYW1ldGVyU3BlYyI6IjFZV2pOditTMzBlMFVnU1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&tag=###CI_COMMIT_TAG###)  
 &nbsp;
 
 &nbsp;
@@ -48,8 +45,10 @@ https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.j
 
 &nbsp;
 
-## 3. Build Pipeline
-https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
+## 3. How to build locally:
+```bash
+gradle docker
+```
 &nbsp;
 
 &nbsp;
@@ -70,7 +69,7 @@ docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mand
 REPOSITORY                                                                                                                                   TAG                    SIZE
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   ###CI_COMMIT_TAG###                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
-public.ecr.aws/docker/library/debian                                                                                                         stable-20220711-slim   80.4MB
+debian                                                                                            stable-20220711-slim   80.4MB
 ```
 
 ```
