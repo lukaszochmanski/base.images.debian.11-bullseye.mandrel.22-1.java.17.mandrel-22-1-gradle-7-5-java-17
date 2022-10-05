@@ -293,9 +293,9 @@ cd /home/quarkus/code-with-quarkus/
 ```
 
 ### 10.2. Run Quarkus with Gradle
-You may also run example given in section 10.1 using Gradle.  
-Unfortunately, author of the project didn't provide such option and we need to convert the project ourselves.
-To convert the existing project into gradle use `gradle init` command and follow prompt messages.  
+You may also run example given from section 10.1 using Gradle.  
+Unfortunately, the author of the project didn't provide such option out-of-the-box and we need to convert the project ourselves.
+To convert the existing project into gradle project use `gradle init` command and follow prompt messages.  
 
 ```bash
 alias la='ls -la'
