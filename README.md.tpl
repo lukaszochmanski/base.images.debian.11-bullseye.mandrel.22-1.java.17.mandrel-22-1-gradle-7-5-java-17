@@ -278,7 +278,22 @@ la /usr/local/bin/containerd && echo
 docker images && echo
 ```
 
-### 10.1. Run Quarkus with Maven
+### 10.1. Run Quarkus with Gradle
+clone the project:
+```bash
+git clone https://github.com/lukaszochmanski/quarkus-jpa-example.git /home/quarkus/quarkus-jpa-example
+cd /home/quarkus/quarkus-jpa-example
+```
+build native image:
+```bash
+gradle build -x test -Dquarkus.package.type=native
+```
+when the build completes, you may run the image, which is located somewhere in /build/libs/ directory.
+```bash
+/home/quarkus/quarkus-jpa-example/build/libs/quarkus-jpa-example-1.0.0-SNAPSHOT-runner
+```
+
+### 10.2. Run Quarkus with Maven
 a sample script is available at the url:
 ```bash
 cat /scripts/07-test-quarkus.sh
@@ -301,10 +316,12 @@ cd /home/quarkus/code-with-quarkus/
 /home/quarkus/code-with-quarkus/target/code-with-quarkus-1.0.0-SNAPSHOT-runner
 ```
 
-### 10.2. Run Quarkus with Gradle
-You may also run example given from section 10.1 using Gradle.  
+### 10.3. How to convert Maven project into Gradle
+You may also run example given from section 10.2 using Gradle.  
 Unfortunately, the author of the project didn't provide such option out-of-the-box and we need to convert the project ourselves.
 To convert the existing project into gradle project use `gradle init` command and follow prompt messages.  
+Later you will need to add quarkus plugin, which is required for native builds.  
+The content is described at the end of this section.  
 
 ```bash
 alias la='ls -la'
@@ -321,7 +338,66 @@ PROJECT_DIR=/home/quarkus/code-with-quarkus
 cd $PROJECT_DIR
 gradle init -p $PROJECT_DIR
 ```
-now copy the files, as described previously, and start the build.
+now copy the files, as described previously:
+`settings.gradle`
+```
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'https://repo.spring.io/snapshot' }
+    }
+    plugins {
+        id "${quarkusPluginId}" version "${quarkusPluginVersion}"
+    }
+}
+rootProject.name = 'code-with-quarkus'
+```
+
+`build.gradle`
+```
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'io.quarkus'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    implementation(
+        enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"),
+        'io.quarkus:quarkus-resteasy:2.13.0.Final'
+        'io.quarkus:quarkus-arc:2.13.0.Final'
+        'io.quarkus:quarkus-core:2.9.2.Final'
+    )
+    testImplementation(
+        'io.quarkus:quarkus-junit5',
+        'io.rest-assured:rest-assured'
+    )
+}
+
+group = 'org.acme'
+version = '1.0.0-SNAPSHOT'
+```
+  
+gradle.properties
+```properties
+quarkusPluginVersion=2.9.2.Final
+quarkusPlatformArtifactId=quarkus-bom
+quarkusPluginId=io.quarkus
+quarkusPlatformGroupId=io.quarkus.platform
+quarkusPlatformVersion=2.9.2.Final
+```
+
+build native image:
 ```bash
 gradle build -x test -Dquarkus.package.type=native
 ```
