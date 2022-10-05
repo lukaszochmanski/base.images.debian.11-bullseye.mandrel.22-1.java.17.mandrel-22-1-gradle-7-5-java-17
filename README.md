@@ -1,8 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Thu Oct  6 00:08:06 CEST 2022  
+last updated: Thu Oct  6 00:17:01 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 1.1.7  
+Latest tag: 1.1.8  
 &nbsp;
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -86,13 +86,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.7
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.8
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.1.7                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.1.8                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -179,7 +179,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.7
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.1.8
 
 # echo $0
 /bin/bash
@@ -333,7 +333,7 @@ cd /home/quarkus/code-with-quarkus/
 
 ### 10.3. How to convert Maven project into Gradle
 You may also run the example in section 10.2 using Gradle.  
-Unfortunately, the author of the project didn't provide such option out-of-the-box and we need to convert the project ourselves.
+Unfortunately, the author of the project didn't provide such option out-of-the-box and we need to convert the project ourselves.  
 To convert the existing project into gradle project use `gradle init` command and follow prompt messages.  
 Later you will need to add quarkus plugin, which is required for native builds.  
 The content is described at the end of this section.  
@@ -353,7 +353,8 @@ PROJECT_DIR=/home/quarkus/code-with-quarkus
 cd $PROJECT_DIR
 gradle init -p $PROJECT_DIR
 ```
-now edit the files    
+now edit the files  
+    
 `settings.gradle`:
 ```
 pluginManagement {
@@ -403,7 +404,7 @@ group = 'org.acme'
 version = '1.0.0-SNAPSHOT'
 ```
   
-gradle.properties:
+`gradle.properties`:
 ```properties
 quarkusPluginVersion=2.9.2.Final
 quarkusPlatformArtifactId=quarkus-bom
