@@ -1,6 +1,6 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 19:06:57 CEST 2022
+last updated: Wed Oct  5 19:21:03 CEST 2022
 &nbsp;
 
 &nbsp;
@@ -8,8 +8,8 @@ last updated: Wed Oct  5 19:06:57 CEST 2022
 Main branch:  
 ![](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiRVhoVDhzdnBrNzdQWVBrU0t6L01rU1hjSmYybm90NjVRNGFVK3c0dTNNYis5UnVuSTlHVEZ5M0dPSktoK1JaVXhOdWJkc1paYjdVM1lXOW1iTG94SHFZPSIsIml2UGFyYW1ldGVyU3BlYyI6IjFZV2pOditTMzBlMFVnU1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
-Latest tag: 1.0.18  
-![](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiRVhoVDhzdnBrNzdQWVBrU0t6L01rU1hjSmYybm90NjVRNGFVK3c0dTNNYis5UnVuSTlHVEZ5M0dPSktoK1JaVXhOdWJkc1paYjdVM1lXOW1iTG94SHFZPSIsIml2UGFyYW1ldGVyU3BlYyI6IjFZV2pOditTMzBlMFVnU1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&tag=1.0.18)  
+Latest tag: 0.0.2  
+![](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiRVhoVDhzdnBrNzdQWVBrU0t6L01rU1hjSmYybm90NjVRNGFVK3c0dTNNYis5UnVuSTlHVEZ5M0dPSktoK1JaVXhOdWJkc1paYjdVM1lXOW1iTG94SHFZPSIsIml2UGFyYW1ldGVyU3BlYyI6IjFZV2pOditTMzBlMFVnU1AiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&tag=0.0.2)  
 &nbsp;
 
 &nbsp;
@@ -39,37 +39,37 @@ in your operating system, you may see compilation errors or other type of errors
 
 ## 1. How to clone:
 ```bash
-git clone git@github.com:lukaszochmanski/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17.git
+git clone git@github.com:lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17.git $GITHUB/base/images/debian/11-bullseye/mandrel/22-1/java/17/mandrel-22-1-gradle-7-5-java-17
 ```
 
 ## 2. GitHub repository URL
-https://github.com/lukaszochmanski/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
+https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 &nbsp;
 
 &nbsp;
 
 ## 3. Build Pipeline
-https://github.com/lukaszochmanski/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
+https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 &nbsp;
 
 &nbsp;
 
 ## 4. DockerHub page:
-https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
+https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 &nbsp;
 
 &nbsp;
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17:1.0.18
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.2
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17   1.0.18                  1.18GB
-ochmanskide/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17   latest                 1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.2                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 public.ecr.aws/docker/library/debian                                                                                                         stable-20220711-slim   80.4MB
 ```
 
@@ -77,26 +77,26 @@ public.ecr.aws/docker/library/debian                                            
 ### Mandrel Image
 ### Debian Slim
 ### Debian based Mandrel Official Image
-### base/images/debian/debian-11-bullseye/mandrel/22-1/java-17/mandrel-22-1-gradle-7-4-java-17
-### base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
-### ochmanskide/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
+### base/images/debian/debian-11-bullseye/mandrel/22-1/java-17/mandrel-22-1-gradle-7-5-java-17
+### base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
+### ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   00-slim            80MB   (80MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   01-clean           80MB   (0MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   02-graalvm         465MB  (385MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   03-gradle          594MB  (129MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   04-aws-cli         753MB  (159MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   05-docker-cli      805MB  (52MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   06-dockerd         870MB  (65MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   07-containerd      904MB  (34MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   08-build-essential
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   09-libz-dev
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   10-zlib1g-dev      1.11GB (196MB)
-debian-11-bullseye/mandrel-22-1-gradle-7-4-java-17   11-git             1.18GB (70MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   00-slim            80MB   (80MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   01-clean           80MB   (0MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   02-graalvm         465MB  (385MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   03-gradle          594MB  (129MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   04-aws-cli         753MB  (159MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   05-docker-cli      805MB  (52MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   06-dockerd         870MB  (65MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   07-containerd      904MB  (34MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   08-build-essential
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   09-libz-dev
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   10-zlib1g-dev      1.11GB (196MB)
+debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   11-git             1.18GB (70MB)
 ```
 
 ## 7. image based on source:
-https://github.com/lukaszochmanski/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
+https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 
 ```  
 FROM public.ecr.aws/docker/library/debian:stable-20220711-slim
@@ -154,7 +154,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 8. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17:1.0.18
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.2
 
 # echo $0
 /bin/bash
@@ -184,7 +184,7 @@ JAVA_HOME=/opt/graalvm
 GRADLE_HOME=/opt/gradle
 DOCKER_REPOSITORY=releases
 PWD=/home/gradle
-IMAGE_SOURCE=https://github.com/lukaszochmanski/base.images.debian.debian-11-bullseye.mandrel.22-1.java-17.mandrel-22-1-gradle-7-4-java-17
+IMAGE_SOURCE=https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 CI_COMMIT_TAG=
 HOME=/root
 CI_COMMIT_SHA=
@@ -216,18 +216,18 @@ Docker version 20.10.11, build dea9396
 
 # gradle -version
 
-Welcome to Gradle 7.4!
+Welcome to Gradle 7.5!
 
 Here are the highlights of this release:
  - Aggregated test and JaCoCo reports
  - Marking additional test source directories as tests in IntelliJ
  - Support for Adoptium JDKs in Java toolchains
 
-For more details see https://docs.gradle.org/7.4/release-notes.html
+For more details see https://docs.gradle.org/7.5/release-notes.html
 
 
 ------------------------------------------------------------
-Gradle 7.4
+Gradle 7.5
 ------------------------------------------------------------
 
 Build time:   2022-02-08 09:58:38 UTC
@@ -313,7 +313,7 @@ The reson behind it is, that the gradle converter works with simple projects.
 Unfortunately, Quarkus projects are not standard and they don't cooperate well.  
 I solved this problem, and I gave you the example that works. You may copy the files from the given git reposiotry.  
 Sample files are available at the url:  
-https://eu-central-1.console.aws.amazon.com/codesuite/codecommit/repositories/base.images.red-hat.red-hat-8-5.quay-io.ubi-quarkus-mandrel.22-1.java-17.mandrel-gradle-7-4-java-17/browse/refs/tags/1.1.7/--/scripts/install/getting-started?region=eu-central-1  
+https://eu-central-1.console.aws.amazon.com/codesuite/codecommit/repositories/base.images.red-hat.red-hat-8-5.quay-io.ubi-quarkus-mandrel.22-1.java-17.mandrel-gradle-7-5-java-17/browse/refs/tags/1.1.7/--/scripts/install/getting-started?region=eu-central-1  
 
 ```bash
 alias la='ls -la'
