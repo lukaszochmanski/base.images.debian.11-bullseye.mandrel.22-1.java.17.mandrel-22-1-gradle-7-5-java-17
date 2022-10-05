@@ -1,8 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 20:44:58 CEST 2022  
+last updated: Wed Oct  5 20:55:04 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 0.0.7  
+Latest tag: 0.0.8  
 &nbsp;
 
 &nbsp;
@@ -51,13 +51,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.7
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.8
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.7                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.8                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -144,7 +144,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.7
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.8
 
 # echo $0
 /bin/bash
@@ -293,17 +293,9 @@ cd /home/quarkus/code-with-quarkus/
 ```
 
 ### 10.2. Run Quarkus with Gradle
-You may convert the existing project into gradle using `gradle init` command as described later in this section.  
-However, before you start you will need 3 files, in order to make it work:
-* build.gradle
-* gradle.properties
-* settings.gradle
-
-The reson behind it is, that the gradle converter works with simple projects.  
-Unfortunately, Quarkus projects are not standard and they don't cooperate well.  
-I solved this problem, and I gave you the example that works. You may copy the files from the given git reposiotry.  
-Sample files are available at the url:  
-https://eu-central-1.console.aws.amazon.com/codesuite/codecommit/repositories/base.images.red-hat.red-hat-8-5.quay-io.ubi-quarkus-mandrel.22-1.java-17.mandrel-gradle-7-5-java-17/browse/refs/tags/1.1.7/--/scripts/install/getting-started?region=eu-central-1  
+You may also run example given in section 10.1 using Gradle.  
+Unfortunately, author of the project didn't provide such option and we need to convert the project ourselves.
+To convert the existing project into gradle use `gradle init` command and follow prompt messages.  
 
 ```bash
 alias la='ls -la'
