@@ -184,14 +184,11 @@ GRADLE_HOME=/opt/gradle
 DOCKER_REPOSITORY=releases
 PWD=/home/gradle
 IMAGE_SOURCE=https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
-CI_COMMIT_TAG=
 HOME=/root
-CI_COMMIT_SHA=
 GRADLE_VERSION=7.5
 TERM=xterm
 HOST=ochmanskide
 SHLVL=1
-CI_COMMIT_BRANCH=
 PATH=/opt/graalvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 DOWNLOADS=/downloads
 DEBIAN_FRONTEND=noninteractive
@@ -247,14 +244,6 @@ org.gradle.daemon=true
 org.gradle.parallel=true
 org.gradle.caching=true
 org.gradle.console=plain
-buildInfo.build.number=CodeBuild
-systemProp.org.gradle.internal.launcher.welcomeMessageEnabled=false
-systemProp.AWS_DEFAULT_REGION=eu-central-1
-systemProp.AWS_CODEARTIFACT_DOMAIN=blueid
-systemProp.AWS_CODEARTIFACT_DOMAIN_OWNER=964010022385
-systemProp.AWS_ECR_DOMAIN_OWNER=964010022385
-systemProp.AWS_CODEARTIFACT_PROFILE=id-tool-devop
-systemProp.AWS_CODEARTIFACT_USER=aws
 
 # ls -la /home/gradle
 drwxr-xr-x 1 root root 4096 Apr 19 10:21 .
@@ -338,8 +327,8 @@ PROJECT_DIR=/home/quarkus/code-with-quarkus
 cd $PROJECT_DIR
 gradle init -p $PROJECT_DIR
 ```
-now copy the files, as described previously:
-`settings.gradle`
+now copy the files, as described previously:  
+`settings.gradle`:
 ```
 pluginManagement {
     repositories {
@@ -356,7 +345,7 @@ pluginManagement {
 rootProject.name = 'code-with-quarkus'
 ```
 
-`build.gradle`
+`build.gradle`:
 ```
 plugins {
     id 'java'
@@ -388,7 +377,7 @@ group = 'org.acme'
 version = '1.0.0-SNAPSHOT'
 ```
   
-gradle.properties
+gradle.properties:
 ```properties
 quarkusPluginVersion=2.9.2.Final
 quarkusPlatformArtifactId=quarkus-bom
