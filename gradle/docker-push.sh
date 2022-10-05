@@ -4,7 +4,7 @@ set +x
 set -e
 echo Buiding image...
 
-PROJECT_VERSION=$(gradle rootProjectVersionRaw -q)
+PROJECT_VERSION=$(gradle printVersion -q)
 if [[ "$PROJECT_VERSION" == *-SNAPSHOT ]]
 then
     echo "INFO: No git tag found for this commit."
@@ -15,7 +15,7 @@ then
 else
   gradle dockerPush
   echo
-  docker push 964010022385.dkr.ecr.eu-central-1.amazonaws.com/base/images/debian/debian-11-bullseye/mandrel/22-1/java-17/mandrel-22-1-gradle-7-4-java-17:latest
+  docker push ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:latest
   echo
   /home/gradle/summary.sh
   echo
