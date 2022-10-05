@@ -9,9 +9,6 @@ ARG JAVA_HOME="/opt/graalvm"
 ARG GRAALVM_HOME="/opt/graalvm"
 ARG GRADLE_HOME="/opt/gradle"
 ARG GRADLE_VERSION="7.5"
-ARG CI_COMMIT_BRANCH
-ARG CI_COMMIT_SHA
-ARG CI_COMMIT_TAG
 ARG DEBIAN_FRONTEND=noninteractive
 ARG LC_ALL=C
 ARG BASE_LAYER_CACHE_KEY
@@ -20,9 +17,6 @@ ENV DOWNLOADS=/downloads \
     DOCKER_HUB_HOST=${DOCKER_HUB_HOST} \
     DOCKER_HUB_URL=${DOCKER_HUB_URL} \
     IMAGE_SOURCE=${IMAGE_SOURCE} \
-    CI_COMMIT_BRANCH=${CI_COMMIT_BRANCH} \
-    CI_COMMIT_SHA=${CI_COMMIT_SHA} \
-    CI_COMMIT_TAG=${CI_COMMIT_TAG} \
     JAVA_HOME=${JAVA_HOME} \
     GRAALVM_HOME=${GRAALVM_HOME} \
     GRADLE_HOME=${GRADLE_HOME} \
@@ -30,11 +24,6 @@ ENV DOWNLOADS=/downloads \
     JAVA_VERSION=${JAVA_VERSION} \
     DEBIAN_FRONTEND=${DEBIAN_FRONTEND} \
     PATH="${JAVA_HOME}/bin:${PATH}"
-
-LABEL git.branch=${CI_COMMIT_BRANCH} \
-      git.commit=${CI_COMMIT_SHA} \
-      git.tag=${CI_COMMIT_TAG} \
-      git.source=${IMAGE_SOURCE}
 
 USER root
 SHELL ["/bin/bash", "-c"]
@@ -45,14 +34,11 @@ RUN /scripts/01-install-tools.sh
 RUN /scripts/02-install-packages.sh
 RUN . /scripts/03-download-mandrel.sh
 RUN . /scripts/04-install-native-image-tool.sh
-RUN /scripts/05-install-aws-cli.sh
 RUN /scripts/06-download-docker-cli.sh
 RUN /scripts/06-install-docker-cli.sh
 VOLUME /var/lib/docker
-#RUN /scripts/07-test-quarkus.sh
 RUN /scripts/08-install-gradle.sh
 RUN /scripts/09-clean-apt-cache.sh
-RUN /scripts/10-import-rds-certificates.sh
 RUN /scripts/11-config-git.sh
 RUN rm -f /home/gradle/xx*
 
@@ -68,18 +54,12 @@ ARG GRAALVM_HOME="/opt/graalvm"
 ARG GRADLE_HOME="/opt/gradle"
 ARG GRADLE_USER_HOME="/home/gradle/.gradle"
 ARG GRADLE_VERSION="7.5"
-ARG CI_COMMIT_BRANCH
-ARG CI_COMMIT_SHA
-ARG CI_COMMIT_TAG
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV DOWNLOADS=/downloads \
     DOCKER_HUB_HOST=${DOCKER_HUB_HOST} \
     DOCKER_HUB_URL=${DOCKER_HUB_URL} \
     IMAGE_SOURCE=${IMAGE_SOURCE} \
-    CI_COMMIT_BRANCH=${CI_COMMIT_BRANCH} \
-    CI_COMMIT_SHA=${CI_COMMIT_SHA} \
-    CI_COMMIT_TAG=${CI_COMMIT_TAG} \
     JAVA_HOME=${JAVA_HOME} \
     GRAALVM_HOME=${GRAALVM_HOME} \
     GRADLE_HOME=${GRADLE_HOME} \
@@ -103,9 +83,6 @@ COPY --from=stage1 /opt/graalvm/ /opt/graalvm/
 
 # 124M
 COPY --from=stage1 /opt/gradle/ /opt/gradle/
-
-# 173M
-COPY --from=stage1 /usr/local/aws-cli /usr/local/aws-cli
 
 # 51M
 COPY --from=stage1 /usr/local/bin/docker /usr/local/bin/docker
@@ -134,7 +111,6 @@ SHELL ["/bin/bash", "-c"]
 # Total: 426 MB
 RUN ln -s /opt/gradle/bin/gradle /usr/bin/gradle \
     && ln -s /home/gradle/.gradle /root/.gradle \
-    && ln -s /usr/local/aws-cli/v2/current/bin/aws /usr/bin/aws \
     && apt-get clean \
     && apt-get update -y \
     && apt-get install --no-install-recommends -y bc ca-certificates build-essential libz-dev zlib1g-dev iptables runc git \
