@@ -28,13 +28,14 @@ sdk install gradle 7.5
 ```bash
 git clone git@github.com:lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17.git $GITHUB/base/images/debian/11-bullseye/mandrel/22-1/java/17/mandrel-22-1-gradle-7-5-java-17
 ```
+&nbsp;
 
+&nbsp;
 ## 2. GitHub repository URL
 https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 &nbsp;
 
 &nbsp;
-
 ## 3. How to build locally:
 ```bash
 gradle docker
@@ -47,7 +48,9 @@ to see all tasks:
 ```bash
 gradle tasks
 ```
-More about Gradle Docker Plugin: https://github.com/palantir/gradle-docker
+More about Gradle Docker Plugin: https://github.com/palantir/gradle-docker  
+&nbsp;
+
 &nbsp;
 
 ## 4. DockerHub page:
