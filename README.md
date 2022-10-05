@@ -1,8 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 21:37:12 CEST 2022  
+last updated: Wed Oct  5 21:39:38 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 1.0.0  
+Latest tag: 1.0.1  
 &nbsp;
 
 &nbsp;
@@ -28,13 +28,14 @@ sdk install gradle 7.5
 ```bash
 git clone git@github.com:lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17.git $GITHUB/base/images/debian/11-bullseye/mandrel/22-1/java/17/mandrel-22-1-gradle-7-5-java-17
 ```
+&nbsp;
 
+&nbsp;
 ## 2. GitHub repository URL
 https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 &nbsp;
 
 &nbsp;
-
 ## 3. How to build locally:
 ```bash
 gradle docker
@@ -47,7 +48,9 @@ to see all tasks:
 ```bash
 gradle tasks
 ```
-More about Gradle Docker Plugin: https://github.com/palantir/gradle-docker
+More about Gradle Docker Plugin: https://github.com/palantir/gradle-docker  
+&nbsp;
+
 &nbsp;
 
 ## 4. DockerHub page:
@@ -58,13 +61,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.0.0
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.0.1
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.0.0                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.0.1                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -151,7 +154,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.0.0
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.0.1
 
 # echo $0
 /bin/bash
