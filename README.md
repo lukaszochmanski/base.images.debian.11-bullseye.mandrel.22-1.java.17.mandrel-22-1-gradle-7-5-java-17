@@ -1,12 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 20:33:06 CEST 2022  
+last updated: Wed Oct  5 20:44:58 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-&nbsp;
-
-&nbsp;
-
-Latest tag: 0.0.6  
+Latest tag: 0.0.7  
 &nbsp;
 
 &nbsp;
@@ -26,10 +22,6 @@ sdk install java 17.0.2-open
 sdk install gradle 7.5
 ```
 &nbsp;
-
-&nbsp;
-&nbsp;
-
 &nbsp;
 
 ## 1. How to clone:
@@ -59,17 +51,18 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.6
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.7
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.6                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.7                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
 
+## 7. Layers:
 ```
 ### Mandrel Image
 ### Debian Slim
@@ -92,14 +85,14 @@ debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   10-zlib1g-dev      1.11GB (
 debian-11-bullseye/mandrel-22-1-gradle-7-5-java-17   11-git             1.18GB (70MB)
 ```
 
-## 7. image based on source:
-https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
+## 8. based on image:
+https://hub.docker.com/_/debian
 
 ```  
-FROM public.ecr.aws/docker/library/debian:stable-20220711-slim
+FROM debian:stable-20220711-slim
 ```
 
-##### 7.1. References
+##### 8.1. References
 https://github.com/vegardit/docker-graalvm-maven  
 
 https://hub.docker.com/r/vegardit/graalvm-maven  
@@ -108,7 +101,7 @@ https://hub.docker.com/r/vegardit/graalvm-maven/tags
 
 https://github.com/graalvm/mandrel/releases/tag/mandrel-22.2.0.0-Final  
 
-##### 7.2. Mandrel
+##### 8.2. Mandrel
 
 **Mandrel 22.2.0.0-Final** is a downstream distribution of the **GraalVM** community edition 22.2.0.  
 Mandrel's main goal is to provide a native-image release specifically to support Quarkus.  
@@ -149,9 +142,9 @@ On Ubuntu-like systems with:
 apt install g++ zlib1g-dev libfreetype6-dev
 ```
 
-## 8. image details:
+## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.6
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.7
 
 # echo $0
 /bin/bash
@@ -263,7 +256,7 @@ drwxr-xr-x 1 root root 4096 Apr 19 10:21 .gradle
 -rwxr-xr-x 1 root root  807 Apr 14 08:44 .profile
 ```
 
-## 9. Quick start
+## 10. Quick start
 ```bash
 java -version && echo
 gradle -version && echo
@@ -276,7 +269,7 @@ la /usr/local/bin/containerd && echo
 docker images && echo
 ```
 
-### 9.1. Run Quarkus with Maven
+### 10.1. Run Quarkus with Maven
 a sample script is available at the url:
 ```bash
 cat /scripts/07-test-quarkus.sh
@@ -299,7 +292,7 @@ cd /home/quarkus/code-with-quarkus/
 /home/quarkus/code-with-quarkus/target/code-with-quarkus-1.0.0-SNAPSHOT-runner
 ```
 
-### 9.2. Run Quarkus with Gradle
+### 10.2. Run Quarkus with Gradle
 You may convert the existing project into gradle using `gradle init` command as described later in this section.  
 However, before you start you will need 3 files, in order to make it work:
 * build.gradle
@@ -336,4 +329,4 @@ when the build completes, you may run the image, which is located somewhere in /
 /home/quarkus/code-with-quarkus/build/libs/code-with-quarkus-1.0.0-SNAPSHOT-runner
 ```
 
-## 10. Frequently Asked Questions (FAQ)
+## 11. Frequently Asked Questions (FAQ)
