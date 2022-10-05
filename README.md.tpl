@@ -332,7 +332,7 @@ cd /home/quarkus/code-with-quarkus/
 ```
 
 ### 10.3. How to convert Maven project into Gradle
-You may also run example given from section 10.2 using Gradle.  
+You may also run the example in section 10.2 using Gradle.  
 Unfortunately, the author of the project didn't provide such option out-of-the-box and we need to convert the project ourselves.
 To convert the existing project into gradle project use `gradle init` command and follow prompt messages.  
 Later you will need to add quarkus plugin, which is required for native builds.  
