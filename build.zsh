@@ -1,13 +1,13 @@
 #!/usr/bin/env zsh
 
 #login
-cd $GITHUB/base/images/debian/debian-11-bullseye/mandrel/22-1/java-17/mandrel-22-1-gradle-7-4-java-17 || exit
+cd $GITHUB/base/images/debian/11-bullseye/mandrel/22-1/java/17/mandrel-22-1-gradle-7-5-java-17 || exit
 DOCKER_HUB_HOST=ochmanskide
 #GROUP_ID=$(gradle rootProjectGroupRaw -q)
 #ARTIFACT_ID=$(gradle rootProjectNameRaw -q)
 #IMAGE_TAG=$(gradle rootProjectVersionRaw -q)
 
-GROUP_ID='base.images.debian.debian-11-bullseye.mandrel.22-1.java-17'
+GROUP_ID='base.images.debian.11-bullseye.mandrel.22-1.java.17'
 ARTIFACT_ID='mandrel-22-1-gradle-7-4-java-17'
 IMAGE_TAG=$(gradle printVersion -q)
 
