@@ -1,8 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 20:55:46 CEST 2022  
+last updated: Wed Oct  5 21:14:05 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 0.0.9  
+Latest tag: 0.0.10  
 &nbsp;
 
 &nbsp;
@@ -51,13 +51,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.9
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.10
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.9                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.10                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -144,7 +144,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.9
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.10
 
 # echo $0
 /bin/bash
@@ -293,9 +293,9 @@ cd /home/quarkus/code-with-quarkus/
 ```
 
 ### 10.2. Run Quarkus with Gradle
-You may also run example given in section 10.1 using Gradle.  
-Unfortunately, author of the project didn't provide such option and we need to convert the project ourselves.
-To convert the existing project into gradle use `gradle init` command and follow prompt messages.  
+You may also run example given from section 10.1 using Gradle.  
+Unfortunately, the author of the project didn't provide such option out-of-the-box and we need to convert the project ourselves.
+To convert the existing project into gradle project use `gradle init` command and follow prompt messages.  
 
 ```bash
 alias la='ls -la'
