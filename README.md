@@ -1,8 +1,8 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 21:14:05 CEST 2022  
+last updated: Wed Oct  5 21:37:12 CEST 2022  
 author: Lukasz Ochmanski (github@ochmanski.de)  
-Latest tag: 0.0.10  
+Latest tag: 1.0.0  
 &nbsp;
 
 &nbsp;
@@ -39,8 +39,15 @@ https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.j
 ```bash
 gradle docker
 ```
-&nbsp;
-
+to push:
+```bash
+gradle dockerPush
+```
+to see all tasks:
+```bash
+gradle tasks
+```
+More about Gradle Docker Plugin: https://github.com/palantir/gradle-docker
 &nbsp;
 
 ## 4. DockerHub page:
@@ -51,13 +58,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.10
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.0.0
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.10                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   1.0.0                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -144,7 +151,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 9. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.10
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:1.0.0
 
 # echo $0
 /bin/bash
