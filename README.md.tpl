@@ -353,7 +353,7 @@ PROJECT_DIR=/home/quarkus/code-with-quarkus
 cd $PROJECT_DIR
 gradle init -p $PROJECT_DIR
 ```
-now copy the files, as described previously:  
+now edit the files    
 `settings.gradle`:
 ```
 pluginManagement {
