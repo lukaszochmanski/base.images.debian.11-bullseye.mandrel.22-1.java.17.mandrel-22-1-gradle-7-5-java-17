@@ -1,12 +1,12 @@
 # Debian-based Mandrel image optimized for building Quarkus projects
 
-last updated: Wed Oct  5 20:30:05 CEST 2022
-author: Lukasz Ochmanski (github@ochmanski.de)
+last updated: Wed Oct  5 20:33:06 CEST 2022  
+author: Lukasz Ochmanski (github@ochmanski.de)  
 &nbsp;
 
 &nbsp;
 
-Latest tag: 0.0.5  
+Latest tag: 0.0.6  
 &nbsp;
 
 &nbsp;
@@ -20,13 +20,11 @@ This capability is vital for deploying to containers in a cloud-native applicati
 
 ### Gradle configuration
 
-Before you start it is assumed that you read and completed the
-[Developer Guide](https://eu-central-1.console.aws.amazon.com/codesuite/codecommit/repositories/documentation.developer-documentation/browse?region=eu-central-1)
-
-The document contains instruction how to configure access to our binary repository (CodeArtifact).  
-Without access to CodeArtifact, you will be unable to compile any java project. Most java projects use libraries,  
-which are stored there. If you don't set up the Multi-Factor authentication, the credentials, and the right repository URL  
-in your operating system, you may see compilation errors or other type of errors during build process.
+Before you start it is assumed that you installed SDKMAN, Java and Gradle.
+```bash
+sdk install java 17.0.2-open
+sdk install gradle 7.5
+```
 &nbsp;
 
 &nbsp;
@@ -61,13 +59,13 @@ https://hub.docker.com/repository/docker/ochmanskide/base.images.debian.11-bulls
 
 ## 5. Image coordinates:
 ```  
-docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.5
+docker pull ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.6
 ```
 
 ## 6. Docker images:
 ```
 REPOSITORY                                                                                                                                   TAG                    SIZE
-ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.5                  1.18GB
+ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   0.0.6                  1.18GB
 ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17   latest                 1.18GB
 debian                                                                                            stable-20220711-slim   80.4MB
 ```
@@ -153,7 +151,7 @@ apt install g++ zlib1g-dev libfreetype6-dev
 
 ## 8. image details:
 ```bash
-$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.5
+$ docker run -it --entrypoint /bin/bash ochmanskide/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17:0.0.6
 
 # echo $0
 /bin/bash
