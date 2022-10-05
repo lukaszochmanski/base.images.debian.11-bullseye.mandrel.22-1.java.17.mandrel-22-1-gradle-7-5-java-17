@@ -30,7 +30,6 @@ git clone git@github.com:lukaszochmanski/base.images.debian.11-bullseye.mandrel.
 ```
 &nbsp;
 
-&nbsp;
 ## 2. GitHub repository URL
 https://github.com/lukaszochmanski/base.images.debian.11-bullseye.mandrel.22-1.java.17.mandrel-22-1-gradle-7-5-java-17
 &nbsp;
